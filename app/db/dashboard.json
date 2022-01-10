@@ -1,0 +1,194 @@
+{
+  "stats": [
+    {
+      "type": "earnings",
+      "title": "$85k",
+      "description": "today's earnings",
+      "change": {
+        "direction": "up",
+        "amount": 8
+      }
+    },
+    {
+      "type": "orders",
+      "title": "369",
+      "description": "new orders",
+      "change": {
+        "direction": "down",
+        "amount": 2
+      }
+    },
+    {
+      "type": "views",
+      "title": "520K",
+      "description": "page views",
+      "change": {
+        "direction": "up",
+        "amount": 3
+      }
+    },
+    {
+      "type": "progress",
+      "title": "Task Progress",
+      "description": "3 remaining"
+    }
+  ],
+  "products": [
+    {
+      "id": "asd12d12131",
+      "title": "Wireless Headphone",
+      "categoryId": "1",
+      "price": 126,
+      "rating": 5,
+      "image": {
+        "small": "https://unsplash.com/photos/dBwadhWa-lI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fGhlYWRwaG9uZXx8MHx8fHwxNjQxODI0MDc4&force=true&w=100",
+        "full": "https://unsplash.com/photos/dBwadhWa-lI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MTN8fGhlYWRwaG9uZXx8MHx8fHwxNjQxODI0MDc4&force=true&w=1920"
+      }
+    },
+    {
+      "id": "21asda2321",
+      "title": "Running Shoes",
+      "categoryId": "2",
+      "price": 75,
+      "rating": 4,
+      "image": {
+        "small": "https://unsplash.com/photos/164_6wVEHfI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8N3x8cnVubmluZyUyMHNob2VzfHwwfHx8fDE2NDE4MTg3NDg&force=true&w=100",
+        "full": "https://unsplash.com/photos/164_6wVEHfI/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8N3x8cnVubmluZyUyMHNob2VzfHwwfHx8fDE2NDE4MTg3NDg&force=true&w=1920"
+      }
+    },
+    {
+      "id": "sa1231dsa",
+      "title": "DSLR Camera",
+      "categoryId": "3",
+      "price": 990,
+      "rating": 5,
+      "image": {
+        "small": "https://unsplash.com/photos/BB2G2cfdXKE/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8ZHNsciUyMGNhbWVyYXx8MHx8fHwxNjQxODI4NTM2&force=true&w=100",
+        "full": "https://unsplash.com/photos/BB2G2cfdXKE/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8MXx8ZHNsciUyMGNhbWVyYXx8MHx8fHwxNjQxODI4NTM2&force=true&w=1920"
+      }
+    },
+    {
+      "id": "sad1dasr123",
+      "title": "Smart Speaker",
+      "categoryId": "4",
+      "price": 249,
+      "rating": 3,
+      "image": {
+        "small": "https://unsplash.com/photos/lZCHy8PLyyo/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8c21hcnQlMjBzcGVha2VyfHwwfHx8fDE2NDE3NTczOTI&force=true&w=100",
+        "full": "https://unsplash.com/photos/lZCHy8PLyyo/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8c21hcnQlMjBzcGVha2VyfHwwfHx8fDE2NDE3NTczOTI&force=true&w=1920"
+      }
+    },
+    {
+      "id": "sad12d13",
+      "title": "2016 Mustang GT",
+      "categoryId": "4",
+      "price": 49000,
+      "rating": 5,
+      "image": {
+        "small": "https://unsplash.com/photos/YApiWyp0lqo/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8Y2FyfHwwfHx8fDE2NDE3NTM1Mzk&force=true&w=100",
+        "full": "https://unsplash.com/photos/YApiWyp0lqo/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8Y2FyfHwwfHx8fDE2NDE3NTM1Mzk&force=true&w=1920"
+      }
+    }
+  ],
+  "productCategories": [
+    {
+      "id": "1",
+      "title": "Bluetooth Devices"
+    },
+    {
+      "id": "2",
+      "title": "Sportswear"
+    },
+    {
+      "id": "3",
+      "title": "Photography"
+    },
+    {
+      "id": "4",
+      "title": "Digital Assistants"
+    },
+    {
+      "id": "5",
+      "title": "Cars"
+    }
+  ],
+  "members": [
+    {
+      "id": "12asd12d21",
+      "firstName": "Emma",
+      "lastName": "Green",
+      "bio": "Customer",
+      "country": "United States",
+      "statusId": "1",
+      "image": {
+        "small": "https://unsplash.com/photos/rDEOVtE7vOs/download?force=true&w=100",
+        "full": "https://unsplash.com/photos/rDEOVtE7vOs/download?force=true&w=1920"
+      }
+    },
+    {
+      "id": "d1212dsa",
+      "firstName": "Bob",
+      "lastName": "Doe",
+      "bio": "Moderator",
+      "country": "Great Britain",
+      "statusId": "2",
+      "image": {
+        "small": "https://unsplash.com/photos/hh3ViD0r0Rc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODM0MDcz&force=true&w=100",
+        "full": "https://unsplash.com/photos/hh3ViD0r0Rc/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODM0MDcz&force=true&w=1920"
+      }
+    },
+    {
+      "id": "d1awsd1",
+      "firstName": "John",
+      "lastName": "Smith",
+      "bio": "Customer",
+      "country": "Turkey",
+      "statusId": "3",
+      "image": {
+        "small": "https://unsplash.com/photos/2McglrBFkns/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODM0NTY3&force=true&w=100",
+        "full": "https://unsplash.com/photos/2McglrBFkns/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODM0NTY3&force=true&w=1920"
+      }
+    },
+    {
+      "id": "d12d12d1",
+      "firstName": "Jim",
+      "lastName": "Jackson",
+      "bio": "Tester",
+      "country": "Ukrain",
+      "statusId": "1",
+      "image": {
+        "small": "https://unsplash.com/photos/8PMvB4VyVXA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODMxODc4&force=true&w=100",
+        "full": "https://unsplash.com/photos/8PMvB4VyVXA/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODMxODc4&force=true&w=1920"
+      }
+    },
+    {
+      "id": "dsad1d21d1",
+      "firstName": "Susan",
+      "lastName": "Wise",
+      "bio": "Customer",
+      "country": "Russia",
+      "statusId": "3",
+      "image": {
+        "small": "https://unsplash.com/photos/QXevDflbl8A/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODMzNzQ0&force=true&w=100",
+        "full": "https://unsplash.com/photos/QXevDflbl8A/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjQxODMzNzQ0&force=true&w=1920"
+      }
+    }
+  ],
+  "memberStatuses": [
+    {
+      "id": "1",
+      "title": "Approved",
+      "color": "#39b689"
+    },
+    {
+      "id": "2",
+      "title": "Pending",
+      "color": "#eda630"
+    },
+    {
+      "id": "3",
+      "title": "Banned",
+      "color": "#e74b4b"
+    }
+  ]
+}
