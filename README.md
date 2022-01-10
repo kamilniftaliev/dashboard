@@ -1,4 +1,4 @@
-# Welcome to Remix!
+# Welcome to an experimental Remix app!
 
 - [Remix Docs](https://remix.run/docs)
 
