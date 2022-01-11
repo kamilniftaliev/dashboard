@@ -1,29 +1,47 @@
-import { Fragment } from "react";
 import clsx from "clsx";
 import { Listbox, Transition } from "@headlessui/react";
 import { PropsOf } from "@headlessui/react/dist/types";
-import { SelectContext, SelectProvider, useSelect } from "./SelectContext";
+import {
+  SelectContext,
+  SelectProps,
+  SelectProvider,
+  useSelect,
+} from "./SelectContext";
 import ButtonComponent, { ButtonVariant } from "../Button";
+import ChevronUpIcon from "@heroicons/react/outline/ChevronUpIcon";
+import ChevronDownIcon from "@heroicons/react/outline/ChevronDownIcon";
+import { runIfFn } from "~/utils/react";
 
-function Select({ children, onChange, ...rest }: PropsOf<Listbox>) {
+function Select({ children, ...rest }: SelectProps) {
   return (
     <div className="relative">
-      <Listbox onChange={onChange} {...rest}>
-        {({ open }) => <SelectProvider open={open}>{children}</SelectProvider>}
-      </Listbox>
+      <SelectProvider {...rest}>
+        {({ updateValue, value }: SelectContext) => (
+          <Listbox value={value} onChange={updateValue}>
+            {children}
+          </Listbox>
+        )}
+      </SelectProvider>
     </div>
   );
 }
 
 interface ButtonProps extends PropsOf<"button"> {}
 
-function Button(props: ButtonProps) {
+function Button({ children, ...props }: ButtonProps) {
+  const { open, value } = useSelect();
+
+  const RightIcon = open ? ChevronUpIcon : ChevronDownIcon;
+
   return (
     <Listbox.Button
       as={ButtonComponent}
       variant={ButtonVariant.Secondary}
+      rightIcon={<RightIcon className="dark:text-slate-50 w-4" />}
       {...props}
-    />
+    >
+      {(args) => runIfFn(children, { ...args, value })}
+    </Listbox.Button>
   );
 }
 
@@ -45,7 +63,7 @@ function Items({ className, ...props }: ItemsProps) {
       <Listbox.Options
         static
         className={clsx(
-          "absolute shadow-md bg-white right-0 w-44 origin-top-right",
+          "rounded-sm absolute shadow-lg mt-1 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 right-0 w-44 origin-top-right",
           className
         )}
         {...props}
@@ -56,10 +74,13 @@ function Items({ className, ...props }: ItemsProps) {
 
 interface ItemProps extends PropsOf<"li"> {}
 
-function Item(props: ItemProps) {
+function Item({ className, ...props }: ItemProps) {
   return (
     <Listbox.Option
-      className="cursor-pointer px-4 py-2 text-base text-slate-800"
+      className={clsx(
+        "cursor-pointer px-4 py-2 text-base text-slate-800 dark:text-slate-100",
+        className
+      )}
       {...props}
     />
   );
