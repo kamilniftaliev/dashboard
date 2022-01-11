@@ -11,11 +11,16 @@ import {
 import { runIfFn } from "~/utils/react";
 
 export type SelectProps = {
+  /** Selected value */
   value?: string;
+
+  /** Callback function for reacting to a value change */
   onChange?: (newValue: string) => void;
   className?: string;
   children: ReactNode;
   disabled?: boolean;
+
+  /** Initial opened/closed state value of the list */
   open?: boolean;
 };
 

@@ -1,5 +1,5 @@
 import { ColorModes } from "~/@types";
-import { isClient, setHTMLAttr } from "./env";
+import { isClient, setHTMLClass } from "./env";
 
 /** On page load or when changing themes, best to add inline in `head` to avoid FOUC */
 if (isClient()) {
@@ -8,22 +8,23 @@ if (isClient()) {
     (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    setHTMLAttr(ColorModes.Dark);
+    setHTMLClass(ColorModes.Dark);
   } else {
-    setHTMLAttr("");
+    setHTMLClass("");
   }
 }
 
 export const updateColorMode = (mode: ColorModes) => {
   if (mode === ColorModes.System) {
     localStorage.removeItem("theme");
-    setHTMLAttr("");
+    setHTMLClass("");
   } else {
     localStorage.theme = mode;
-    setHTMLAttr(mode);
+    setHTMLClass(mode);
   }
 };
 
+/** Reads color mode from the root element */
 export const getColorModeFromHTML = () => {
   const HTMLClasslist = document.documentElement.classList;
 

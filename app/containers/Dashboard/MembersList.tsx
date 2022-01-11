@@ -32,8 +32,10 @@ export default function MembersList({ members, statuses }: MembersListProps) {
             { id, firstName, lastName, bio, country, statusId, image },
             index
           ) => {
+            // Find the status object from statuses list by it's id
             const { title: statusTitle, color: statusColor } =
               statuses.find(({ id }) => id === statusId) || {};
+            // Full name
             const name = `${firstName} ${lastName}`;
 
             return (

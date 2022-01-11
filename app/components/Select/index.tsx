@@ -12,6 +12,7 @@ import ChevronUpIcon from "@heroicons/react/outline/ChevronUpIcon";
 import ChevronDownIcon from "@heroicons/react/outline/ChevronDownIcon";
 import { runIfFn } from "~/utils/react";
 
+/** Root select component */
 function Select({ children, ...rest }: SelectProps) {
   return (
     <div className="relative">
@@ -28,6 +29,7 @@ function Select({ children, ...rest }: SelectProps) {
 
 interface ButtonProps extends PropsOf<"button"> {}
 
+/** Select's dropdown triggerer component */
 function Button({ children, ...props }: ButtonProps) {
   const { open, value } = useSelect();
 
@@ -47,6 +49,7 @@ function Button({ children, ...props }: ButtonProps) {
 
 interface ItemsProps extends PropsOf<"ul"> {}
 
+/** Dropdown list's wrapper component */
 function Items({ className, ...props }: ItemsProps) {
   const { open } = useSelect();
 
@@ -74,6 +77,7 @@ function Items({ className, ...props }: ItemsProps) {
 
 interface ItemProps extends PropsOf<"li"> {}
 
+/** Dropdown list's item component */
 function Item({ className, ...props }: ItemProps) {
   return (
     <Listbox.Option

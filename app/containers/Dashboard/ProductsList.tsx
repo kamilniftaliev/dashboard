@@ -39,6 +39,7 @@ export default function ProductsList({
       <div className="flex flex-col">
         {products.map(
           ({ id, title, image, rating, categoryId, price }, index) => {
+            // Find the category object from categories list by it's id
             const { title: categoryTitle } =
               categories.find(({ id }) => id === categoryId) || {};
 
@@ -61,6 +62,7 @@ export default function ProductsList({
                   )}
                 </div>
                 <div className="flex gap-x-0.5">
+                  {/* Show as much stars as needed */}
                   {MAX_STARS_ARRAY.map((_, index) =>
                     rating - 1 >= index ? (
                       <SelectedStarIcon

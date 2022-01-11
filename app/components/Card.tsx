@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 export interface CardProps extends ComponentProps<"div"> {}
 
+/** Square component to wrap a content */
 export default function Card({ children, className, ...rest }: CardProps) {
   return (
     <div

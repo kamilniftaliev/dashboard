@@ -1,4 +1,5 @@
 export const isClient = () => typeof window !== "undefined";
 
-export const setHTMLAttr = (attr: string) =>
+/** Sets class to the root (HTML) tag */
+export const setHTMLClass = (attr: string) =>
   document.documentElement.setAttribute("class", attr);

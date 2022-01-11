@@ -4,6 +4,7 @@ interface DashboardCardProps extends CardProps {
   title: string;
 }
 
+/** A card component with title as a first line */
 export default function DashboardCard({
   title,
   children,

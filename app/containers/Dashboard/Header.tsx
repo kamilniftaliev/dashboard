@@ -57,6 +57,7 @@ export default function Header({ stats }: HeaderProps) {
 
         let changeInfo = null;
 
+        // If there's a change in comparison with last results
         if (change) {
           const { amount, direction } = change;
 
@@ -65,6 +66,7 @@ export default function Header({ stats }: HeaderProps) {
           const arrowColor =
             direction === "up" ? "text-green-500" : "text-red-500";
 
+          // Render an arrow with percentage
           changeInfo = (
             <span className={clsx("flex items-center text-base", arrowColor)}>
               <span>{amount}%</span>
