@@ -46,14 +46,16 @@ export default function ProductsList({
               <div
                 key={id}
                 className={clsx("flex gap-x-4 py-2 px-4", {
-                  "bg-cyan-50": index % 2,
+                  "bg-cyan-50 dark:bg-slate-900": index % 2,
                 })}
               >
                 <img className="rounded-sm" src={image.small} alt={title} />
                 <div className="w-1/3 flex flex-col justify-center">
-                  <p className="text-sm font-medium">{title}</p>
+                  <p className="text-sm font-medium text-slate-600 dark:text-white">
+                    {title}
+                  </p>
                   {categoryTitle && (
-                    <p className="text-xs font-medium text-slate-500">
+                    <p className="text-xs font-medium text-slate-400">
                       {categoryTitle}
                     </p>
                   )}
@@ -71,7 +73,7 @@ export default function ProductsList({
                     )
                   )}
                 </div>
-                <div className="flex items-center ml-auto">
+                <div className="flex items-center ml-auto text-slate-600 dark:text-white">
                   <p className="text-xs w-full text-right">
                     {formatter.format(price)}
                   </p>

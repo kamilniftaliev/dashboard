@@ -6,6 +6,7 @@ import ArrowSmUpIcon from "@heroicons/react/outline/ArrowSmUpIcon";
 import ArrowSmDownIcon from "@heroicons/react/outline/ArrowSmDownIcon";
 import { StatType } from "~/@types";
 import clsx from "clsx";
+import Card from "~/components/Card";
 
 type Stat = {
   type: StatType;
@@ -50,7 +51,7 @@ const ICONS = {
 
 export default function Header({ stats }: HeaderProps) {
   return (
-    <div className="flex gap-x-4">
+    <div className="flex gap-x-6">
       {stats.map(({ type, title, description, change }) => {
         const { icon: Icon, color } = ICONS[type];
 
@@ -73,7 +74,7 @@ export default function Header({ stats }: HeaderProps) {
         }
 
         return (
-          <div key={type} className="flex grow shadow-md rounded bg-white p-2">
+          <Card key={type} className="flex p-2">
             <div className={clsx("flex items-center justify-center ")}>
               <Icon
                 className={clsx(
@@ -84,13 +85,13 @@ export default function Header({ stats }: HeaderProps) {
               />
             </div>
             <div className="flex flex-col justify-center">
-              <p className="flex gap-x-3 text-2xl text-slate-600">
+              <p className="flex gap-x-3 text-2xl text-slate-600 dark:text-white">
                 {title}
                 {changeInfo}
               </p>
-              <p className="text-lg text-slate-500">{description}</p>
+              <p className="text-lg text-slate-400">{description}</p>
             </div>
-          </div>
+          </Card>
         );
       })}
     </div>

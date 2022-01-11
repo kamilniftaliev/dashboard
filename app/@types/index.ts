@@ -9,3 +9,9 @@ export type Image = {
   /** Full size (original) version */
   full: string;
 };
+
+export enum ColorModes {
+  Light = "light",
+  Dark = "dark",
+  System = "system",
+}

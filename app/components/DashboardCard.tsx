@@ -1,25 +1,20 @@
-import clsx from "clsx";
-import { ComponentProps } from "react";
+import Card, { CardProps } from "./Card";
 
-interface DashboardCardProps extends ComponentProps<"div"> {
+interface DashboardCardProps extends CardProps {
   title: string;
 }
 
 export default function DashboardCard({
   title,
   children,
-  className,
   ...rest
 }: DashboardCardProps) {
   return (
-    <div
-      className={clsx("grow shadow-md rounded bg-white", className)}
-      {...rest}
-    >
-      <div className="border-b text-xl py-3 px-4">
+    <Card {...rest}>
+      <div className="border-b text-xl dark:text-white dark:border-slate-500 py-3 px-4">
         <p>{title}</p>
       </div>
       {children}
-    </div>
+    </Card>
   );
 }

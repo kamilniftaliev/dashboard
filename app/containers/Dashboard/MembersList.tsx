@@ -1,6 +1,6 @@
-import DashboardCard from "~/components/DashboardCard";
 import { Image } from "~/@types";
 import clsx from "clsx";
+import DashboardCard from "~/components/DashboardCard";
 
 type Member = {
   id: string;
@@ -40,7 +40,7 @@ export default function MembersList({ members, statuses }: MembersListProps) {
               <div
                 key={id}
                 className={clsx("flex items-center gap-x-4 py-2 px-4", {
-                  "bg-cyan-50": index % 2,
+                  "bg-cyan-50 dark:bg-slate-900": index % 2,
                 })}
               >
                 <img
@@ -48,15 +48,17 @@ export default function MembersList({ members, statuses }: MembersListProps) {
                   src={image.small}
                   alt={name}
                 />
-                <p className="w-1/3 text-sm">{name}</p>
-                <p className="w-1/5 text-sm text-gray-500">{bio}</p>
-                <p className="w-1/5 text-sm text-gray-500">{country}</p>
+                <p className="w-1/3 text-sm text-slate-600 dark:text-white">
+                  {name}
+                </p>
+                <p className="w-1/5 text-sm text-slate-400">{bio}</p>
+                <p className="w-1/5 text-sm text-slate-400">{country}</p>
                 {statusTitle && (
-                  <div className="flex items-center gap-x-2 text-xs font-medium">
+                  <div className="flex items-center gap-x-2 text-xs font-medium text-slate-600 dark:text-white">
                     <span
                       className="rounded-full w-2 h-2"
                       style={{ backgroundColor: statusColor }}
-                    ></span>
+                    />
                     {statusTitle}
                   </div>
                 )}

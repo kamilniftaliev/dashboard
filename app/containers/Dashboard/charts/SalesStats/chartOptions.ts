@@ -1,11 +1,7 @@
-import Highcharts from "highcharts";
-import HighchartsReact from "highcharts-react-official";
-import { useRef } from "react";
-import DashboardCard from "~/components/DashboardCard";
-
-const options: Highcharts.Options = {
+export const chartOptions: Highcharts.Options = {
   chart: {
     type: "area",
+    backgroundColor: "transparent",
   },
   title: {
     text: undefined,
@@ -13,8 +9,11 @@ const options: Highcharts.Options = {
   xAxis: {
     allowDecimals: false,
     labels: {
+      style: {
+        color: "var(--text-secondary-color)",
+      },
       formatter: function () {
-        return `${this.value}`; // clean, unformatted number for year
+        return `${this.value}`;
       },
     },
     gridLineWidth: 1,
@@ -27,9 +26,20 @@ const options: Highcharts.Options = {
     gridLineWidth: 0,
 
     labels: {
+      style: {
+        color: "var(--text-secondary-color)",
+      },
       formatter: function () {
         return `${this.value / 1000 + "k"}`;
       },
+    },
+  },
+  legend: {
+    itemStyle: {
+      color: "var(--text-secondary-color)",
+    },
+    itemHoverStyle: {
+      color: "var(--text-primary-color)",
     },
   },
   tooltip: {
@@ -61,23 +71,3 @@ const options: Highcharts.Options = {
     },
   ],
 };
-
-interface SalesStatsProps {
-  // We could pass some custom props to display anything specific.
-}
-
-export default function SalesStats({}: SalesStatsProps) {
-  const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
-
-  return (
-    <DashboardCard className="w-2/5" title="Sales Stats">
-      <div className="px-2 py-2">
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={options}
-          ref={chartComponentRef}
-        />
-      </div>
-    </DashboardCard>
-  );
-}

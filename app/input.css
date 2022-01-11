@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  --text-primary-color: #0f172a;
+  --text-secondary-color: #64748b;
+}
+
+html.dark {
+  --text-primary-color: #f3f4f6;
+  --text-secondary-color: #b2bac4;
+}
